@@ -1,0 +1,493 @@
+{
+  "label": [
+    {
+      "createBy": null,
+      "createTime": null,
+      "updateBy": null,
+      "updateTime": null,
+      "remark": null,
+      "params": {
+        "@type": "java.util.HashMap"
+      },
+      "id": 70,
+      "writerType": "pcxscs",
+      "paramKey": "label",
+      "paramName": "作品标签",
+      "paramType": null,
+      "sort": null,
+      "placeholder": null,
+      "icon": null,
+      "pid": 0,
+      "disabled": null,
+      "children": [
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 75,
+          "writerType": "pclabel",
+          "paramKey": "background",
+          "paramName": "故事背景",
+          "paramType": "select",
+          "sort": 0,
+          "placeholder": "*修仙世界,末世基地市,古代江湖,现代校园,*都市娱乐,商业职场,古代王朝,*架空历史,平行时空,*女尊男卑,abo世界,上古神话,*商周,*秦汉,*唐宋,*盛唐,*北宋,架空古代,未来星际历,远古洪荒,近未来,中世纪,民国时期,蒸汽时代,*星际联盟,废土沙漠,深海秘境,*兽人部落,精灵森林,亡灵国度,机械城邦,赛博都市,奴隶制王朝,修真门派林立,兽人母系社会,虫族蜂巢文明,魔法学院制,封建贵族社会,异能者公会,灵气枯竭世界,无魔世界,*丧尸病毒,基因锁世界,机械文明巅峰,兽潮频发平原,星际流放地,修真文明,魔法文明,科技修真融合,虫族文明,机械文明,精灵文明,矮人锻造文明,亡灵魔法文明,共生体文明,*古风科举,美食江湖,灵异侦探社,御兽师协会,星际移民船,星际宇宙,魔法世界,修真界,机械飞升,亡灵复苏,*兽世生存,野外,*迷雾环境,朝堂,江湖,现实生活",
+          "icon": "",
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 74,
+          "writerType": "pclabel",
+          "paramKey": "elementLabel",
+          "paramName": "故事元素",
+          "paramType": "select",
+          "sort": 1,
+          "placeholder": "*直播文,*聊天群文,灵气复苏,废土末世,逆袭打脸,悬疑探案,*末日求生,*无限流闯关,*快穿任务,*系统签到,秘境探险,*甜宠无虐,*双向救赎,*相爱相杀,*师徒恋,伪骨科,双洁文,权谋斗争,*迪化文,*幕后流,*种田文,权谋,白月光,替身文学,暗恋,青梅竹马,一见钟情,死对头,扮猪吃虎,女性觉,赛博朋克,蒸汽朋克,星际宇宙,魔法世界,修真界,古代王朝,平行时空,中世纪奇幻,星际争霸,校园争霸契约召唤,*先婚后爱,单恋虐恋,多角恋,星际海盗,丧尸围城,神魔大战,虫族入侵,领土争夺,校园欺凌反击,家族恩怨,跨种族战争,时间悖论,克苏鲁,机械飞升,异能觉醒,基因进化,亡灵复苏,*兽世生存,契约婚姻,系统流,*马甲文,反套路,沙雕搞笑,玄学算卦,美食经营,*萌宠相伴,躺平发育,玄学修仙,直播逆袭,修仙+系统,科幻+言情,古风+探案,校园+异能,末世+基建,西幻+恋爱,星际+甜宠,民国+悬疑,现代+灵异,娱乐圈+爽文,魂穿,魄夺,心劫,灵契,神降,魔怔,妖变,鬼探,仙途,佛劫,道心,武炼,器灵,阵师,符尊,蛊王,医毒,商战,职斗,律政,医途,学神,校霸,*学霸,*顶流,*影帝,*影后,作死系统,轻松爽文,轻喜剧,现实向,温馨治愈,*古言,家庭教育,亲子关系",
+          "icon": "",
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 71,
+          "writerType": "pclabel",
+          "paramKey": "storyLabel",
+          "paramName": "情节标签",
+          "paramType": "select",
+          "sort": 2,
+          "placeholder": "逆袭打脸,重生复仇,*穿书自救,咸鱼翻身,死对头,替身文学,暗恋,青梅竹马,一见钟情,双向奔赴,*扮猪吃虎,打脸,真假千金,女性觉醒,空间,系统,古穿今,清穿,灵魂互换,金手指,异能,灵异,性转校园,娱乐圈,美食,下堂,*种田,*医术,*电竞,*游戏,*直播,*综艺,风水,*修仙,打怪升级,盗墓,推理,权谋,小众职业养成,白月光,替嫁,隐婚,二婚,错嫁,逃婚,*先婚后爱,先婚后爱（伪）,*闪婚,离婚后,替身,契约,双暗恋,姐弟恋,日久生情,相爱相杀,前世今生,欢喜冤家,破镜重圆,复仇,逆袭,虐渣,升级,宫斗,宅斗,读心,致富,*逃荒,*屯物资,成长,求生,*野外生存,团队协作,智斗,资源争夺,*迷雾生存,朝堂江,慢热甜宠,青春期叛逆,成长励志,洪荒流",
+          "icon": "2",
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 80,
+          "writerType": "pclabel",
+          "paramKey": "background",
+          "paramName": "热词推荐",
+          "paramType": null,
+          "sort": 3,
+          "placeholder": "*真假千金,*斩神,*奶爸,*迪化,*神豪,*绝地逃生,*地下城,*迷雾求生,*电竞,*大秦,*大唐,*大明,*北宋,*惊悚游戏,*游戏主播,*甄嬛衍生,*还珠衍生,*神奇宝贝,*龙珠,*奥特曼,*特摄,*西游,*三国,*红楼,*水浒,*特种兵,*校花,*女帝,*万人迷,*团宠,*偷听心声,*多女主,*兽世多男主,*多子多福,*女多男少,*资本家大小姐,*黑科技,*万倍返还,*长生夜市小吃,*家常菜,*上古机甲,*癌症治愈仪,*量子计算机,*悬浮汽车,*重生七零,*八零甜宠,*九零暴富,*七零糙汉,*知青下乡,*年代经商,*年代养殖,*年代军婚,*六零逃荒,*五零农家,*古代宅斗,*侯府嫡女,*王府甜宠,*宫廷宫斗,*农家嫡女,*渔村生活,*古代经商,*古代科举（女扮男装）,*古代行医,*边关军婚,*亡国重生,*穿书古言,*黑客技术,*多马甲（神医 + 黑客 + 财阀）,*锦鲤体质,*旺夫体质,*灾星逆袭,*预言,*重生先知,*穿书先知,*萌宝异能,*兽语者,*植物语者,*风水师,*阴阳师,*驱邪师,*解梦师",
+          "icon": null,
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 72,
+          "writerType": "pclabel",
+          "paramKey": "identityLabel",
+          "paramName": "女主身份",
+          "paramType": "select",
+          "sort": 4,
+          "placeholder": "*满级大佬,假死重生女,被废太子妃,废妃之女,民间乞丐女,流浪少女,复仇者,女主逆袭,毒妃,*妖妃,嫡女,庶女,贵女,千金,*真假千金,孤儿,弃妇,寡妇,小妾,继母,公主,*女帝,*女王,*医女,*女太医,药童,*制香师,香道传人,*占星师,算命先生,卜卦师,前世今生,记忆回溯者,异族血脉,蛮夷遗孤,预言之女,天命之人,心理医生,心理学家,黑客,程序员,金融分析师,调香师,设计师,警察,侦探,记者,教师,科学家,*画家,*小说家,*网红,*主播,经纪人,制片人,*影后,*顶流偶像,*大明星,大学生,大学教授,学霸,学渣,校花,女仆,丫鬟,厨娘,宫女,保镖,特种兵,探险者,社畜,*宅女,*剩女,戏子,歌伎,杂役,乐坊女子,*青楼花魁,*风月场老鸨,奴婢出身却被赐婚为妃,嫁入豪门,冷血杀手,暗卫首领,疯癫女子,表面痴傻实则清醒,失语症患者,精神创伤者,*哑巴,言语障碍者,*佛门弟子,小沙弥,尼姑,双面人,叛逆者,阴谋家,野心家,伪装者,揭穿者,执念者,遗忘人,守护者,纸片人",
+          "icon": "",
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 81,
+          "writerType": "pclabel",
+          "paramKey": "girlLabel",
+          "paramName": "女主人设",
+          "paramType": null,
+          "sort": 5,
+          "placeholder": "*疯批,白月光,*绿茶,*黑莲花,*病娇,*腹黑,*毒舌怼王,*傲娇,高冷,禁欲,*邪魅,*妖孽,妖艳,双标,倔脾气,脸皮厚,话痨,神秘莫测,古灵精怪,直球选手,逗比戏精,闷骚,猫系,奶系,心机,完美,强迫症,狂躁症,硬骨头,恋爱脑,护短,*颜控,花痴,深情专一,贤妻良母,*天才学霸,*神医圣手,*特工飒姐,*武力天花板,*智慧担当,谈判专家,战斗狂人,设计天才,调香达人,调酒高手,黑客大神,*电竞选手,*运动员,*小说家,*探险者,*考古学家,金融分析师,投行经理,扮猪吃虎,*白切黑,*萝莉金刚芭比,冰山单纯白,*柔弱病娇黑,*厌世嘴心软,*冷血心内热,*高强弱不禁,*优雅反骨魔,*高岭话痨花,*富贵缺爱花,*邻家暴躁友,*刁蛮天真甜,*疯批中二妹,婉约掌控局,心狠敏感脆,清醒神经条,拜金心口异,天使心机茶,冰清心机深,笨手冷眼观,无恶天真烂,杀伐实则娇,没心恋爱脑,无害阴险计,反套路王,控制狂魔,*咸鱼躺平,摆烂达人,*自律狂魔,*懒癌晚期,*女武神威,女巫神秘,系统携带者,天然呆切黑,*女海王专情,玩世爱直球,病弱,萝莉,御姐,萌妹,*女王,女汉子,*白富美,小绵羊,*小狐狸,小野猫,小白兔,*小祖宗,执念者,遗忘人,神秘客,矛盾体,掌控者,棋子人,温柔杀器,铁面柔情,冷酷人设,谋略在线,异能者,独行侠,团队魂,反向PUA,人间清醒,姐系女主,战损美人",
+          "icon": null,
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 73,
+          "writerType": "pclabel",
+          "paramKey": "figureLabel",
+          "paramName": "男主身份",
+          "paramType": "select",
+          "sort": 6,
+          "placeholder": "*医生,律师,法医,黑客,程序员,金融分析师,考古学家,心理学家,*调香师,调酒师,设计师,警察,特种兵,侦探,记者,教师,保育员,科学家,*画家,*小说家,*网红,*主播,经纪人,*制片人,*影帝,*顶流偶像,*大明星,探险者,大学生,大学教授,*学霸,*学渣,校草,学长,*校霸,保镖,*赘婿,骑士,下属,*帝王,*王爷,*世子,*皇叔,*贵公子,*纨绔,少爷,霸总,总裁,社畜,宅男,大叔,光棍,前夫,*奶爸,*满级大佬,废物草包,复仇者,救世主,双面人,叛逆者,阴谋家,野心家,伪装者,揭穿者,执念者,遗忘人,守护者,男性主角,纸片人,游戏NPC,*太子伴读,宫廷内侍,阴阳师,*剑修,修士,*炼丹师,皇商,富商之子,民间术士,被贬皇子,荒野猎户,街头混混,程序员男友,心理咨询师,网络主播,直播带货达人,AI训练师,数据分析师,*电竞教练,战队经理,环保志愿者,自然保护者,美食博主,食物测评人,纪录片导演,文化记录者,社区工作者,志愿者,穿越者,NPC觉醒者,系统绑定者,异能继承人,古武传人,灵魂寄宿体,命运棋子,次元穿越者,世界线修正者,*单亲爸爸,被误解的普通人,低调大佬,冷门职业从业者,*殡葬师,消防员,飞行员,曾经的失败者,被遗忘的天才",
+          "icon": "",
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 82,
+          "writerType": "pclabel",
+          "paramKey": "boyLabel",
+          "paramName": "男主人设",
+          "paramType": null,
+          "sort": 7,
+          "placeholder": "*疯批,*白月光,*娇占有,*腹黑,毒舌怼王,高冷,禁欲,*邪魅,*妖孽,*傲娇,疯批大佬,疯批校草,病娇医生,病娇总裁,毒舌医生,毒舌校草,直球恋爱,深情男主,深情校草,深情医生,深情总裁,天才学霸,神医圣手,特工硬汉,武力天花板,智慧担当,谈判专家,战斗狂人,设计天才,调香达人,调酒高手,黑客大神,*电竞大神,运动员,小说家,探险者,考古学家,金融分析师,投行经理,扮猪吃虎,白切黑,高冷禁欲,腹黑总裁,傲娇男神,痞帅医生,高冷校霸,腹黑校草,毒舌校草,逗比校草,*海王校草,温柔校草,霸总小奶狗,痞帅总裁,高冷医生,温柔医生,霸总医生,痞帅警官,高冷总裁,忠犬老公,温柔总裁,霸总爹系,*疯批美人,温柔学长,禁欲教授,忠犬男主,直球猛男,毒舌学霸,逗比戏精,海王玩家,*渣男本渣,温柔杀器,铁面柔情,冷酷人设,谋略在线,异能者,独行侠,团队魂,反向PUA男主,人间清醒男主,姐系男主,战损美人,执念者,遗忘人,神秘客,矛盾体,掌控者,棋子人,硬汉,霸总,校草,校霸,少爷,骑士,老公,*奶爸,高富帅,贵公子,大魔王,小绵羊,小狐狸,小野猫,小白兔,小祖宗,乐天派,治愈天使,阳光少年,独立自信,社交达人,开心果担当,天真无邪,善良单纯,坚强勇敢,赤子之心,*佛系随缘,乖巧懂事,悲观者,孤僻,暴躁,薄情,花心,拜金,娇气,嗲精,怂包,哭包,幼稚,轻浮,无赖,装逼,烦人精,双标,倔脾气,脸皮厚,破坏王,话痨,神秘莫测,古灵精怪,直球选手,猫系,奶系,心机,完美,强迫症,狂躁症,硬骨头,恋爱脑,*护短,颜控,花痴,浪子,深情骑士,*学霸大神,*学霸校草,*学霸医生,*学霸校霸,腹黑军师,大学教授,海王,渣男,深情专一,天然呆切黑,海王专情,玩世爱直球",
+          "icon": null,
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 83,
+          "writerType": "pclabel",
+          "paramKey": "fanpaiLabel",
+          "paramName": "反派人设",
+          "paramType": null,
+          "sort": 8,
+          "placeholder": "阴险谋士,毒舌反派,*病娇疯批,伪善白莲花,野心权臣,腹黑总裁,冷血杀手,傲娇反派,狠辣 Boss, 伪善君子,心机皇子,毒枭大佬,变态狂徒,阴鸷校霸,贪婪财阀,嫉妒小人,虚伪影帝,残忍暴君,狡诈商人,*恶毒继母,*阴狠太监,狠辣黑帮,偏执反派,恶毒女配,阴险律师,冷血医生,贪婪官员,伪善神父,阴鸷杀手,狠辣军阀,狡诈间谍,恶毒闺蜜,阴狠总裁,残忍海盗,偏执总裁,阴险校草,狠辣皇后,狡诈王爷,阴狠将军,残忍杀手,偏执医生,阴险律师,狠辣商人,狡诈皇帝,恶毒公主,阴狠校霸,残忍黑帮,偏执校草,阴险权臣,狠辣太监,狡诈海盗,恶毒皇子,阴狠杀手,残忍军阀,偏执律师,阴险医生,狠辣总裁,狡诈将军,*恶毒皇后,阴狠王爷,*残忍皇帝,偏执将军,阴险海盗,狠辣公主,狡诈皇子,恶毒太监,阴狠黑帮,残忍校霸,偏执医生,阴险商人,狠辣官员,狡诈神父,恶毒闺蜜,阴狠间谍,残忍杀手,偏执总裁,阴险皇后,狠辣王爷,狡诈将军,恶毒皇帝,阴狠公主,残忍皇子,偏执太监,阴险黑帮,狠辣海盗,狡诈校草,恶毒校霸,阴狠医生,残忍律师,偏执权臣",
+          "icon": null,
+          "pid": 70,
+          "disabled": 0,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "createBy": null,
+      "createTime": null,
+      "updateBy": null,
+      "updateTime": null,
+      "remark": null,
+      "params": {
+        "@type": "java.util.HashMap"
+      },
+      "id": 54,
+      "writerType": "pcxscs",
+      "paramKey": "style",
+      "paramName": "作品类型",
+      "paramType": null,
+      "sort": null,
+      "placeholder": null,
+      "icon": null,
+      "pid": 0,
+      "disabled": null,
+      "children": [
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 55,
+          "writerType": "pcstyle",
+          "paramKey": "xhStyle",
+          "paramName": "玄幻",
+          "paramType": null,
+          "sort": 1,
+          "placeholder": "东方玄幻,王朝争霸,异世大陆,异术超能,远古神话,高武世界,转世重生,西方玄幻",
+          "icon": null,
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 56,
+          "writerType": "pcstyle",
+          "paramKey": "qhStyle",
+          "paramName": "奇幻",
+          "paramType": null,
+          "sort": 2,
+          "placeholder": "奇妙魔法,魔法,史诗奇幻,诡秘,异界,神话,奇幻虐恋,西方奇幻,吸血家族,魔法校园,异类兽族,领主贵族,剑与魔法,历史神话",
+          "icon": null,
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 57,
+          "writerType": "pcstyle",
+          "paramKey": "wxStyle",
+          "paramName": "武侠",
+          "paramType": "select",
+          "sort": 3,
+          "placeholder": "传统武侠,新派武侠,仙侠武侠,武侠幻想,古典武侠,历史武侠,朝堂武侠,暗黑武侠,女性武侠,轻松武侠,诸天武侠,赛博武侠,上古洪荒,幻想修真,古装言情,热血武侠",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 58,
+          "writerType": "pcstyle",
+          "paramKey": "xxStyle",
+          "paramName": "仙侠",
+          "paramType": "select",
+          "sort": 4,
+          "placeholder": "仙侠修真,古典仙侠,修真升级流,仙侠探案,仙侠言情,穿越仙侠,种田流仙侠,志怪仙侠,赛博仙侠,蜀山剑侠,古典修仙,现代修真,修真文明,奇幻修真,洪荒封神,神话修仙,现代修仙\n",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 59,
+          "writerType": "pcstyle",
+          "paramKey": "dsStyle",
+          "paramName": "都市",
+          "paramType": "select",
+          "sort": 5,
+          "placeholder": "商战逆袭,异能觉醒,赘婿爽文,刑侦探案,校园职场,神豪系统,娱乐圈文,悬疑灵异,医疗兵王,时间循环,现代都市,都市异能,都市生活,都市重生,校园生活,娱乐明星,商战职场,都市高手,乡村生活,官场",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 61,
+          "writerType": "pcstyle",
+          "paramKey": "lsStyle",
+          "paramName": "历史",
+          "paramType": "select",
+          "sort": 7,
+          "placeholder": "​权谋朝堂,军事争霸​​,科举官场​​,北宋穿越,暗黑生存,穿越历史,历史传记,架空历史,秦汉三国,两宋元明,两晋隋唐,清史明国,国外历史,历史正剧,军事战争",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 62,
+          "writerType": "pcstyle",
+          "paramKey": "jsStyle",
+          "paramName": "军事",
+          "paramType": "select",
+          "sort": 8,
+          "placeholder": "军涯生活,军事战争,谍战特工,战争幻想,抗日烽火",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 63,
+          "writerType": "pcstyle",
+          "paramKey": "yxStyle",
+          "paramName": "游戏",
+          "paramType": "select",
+          "sort": 9,
+          "placeholder": "游戏异界,虚拟网络,游戏电竞,游戏天才,异界游戏化​​​​,​​元宇宙经营​​,经典IP改编,单机无限流​​,​​历史游戏化,第四天灾流,同人衍生",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 65,
+          "writerType": "pcstyle",
+          "paramKey": "khStyle",
+          "paramName": "科幻",
+          "paramType": "select",
+          "sort": 11,
+          "placeholder": "末世危机,时空穿越,未来世界,星际战争,黑科技,未来机甲,太空生存,​​末日重建,虚拟现实,​​生物变异​​,​​硬核军事,量子科幻​​,生态灾难,​​时间悖论​​​​,未来科技",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 66,
+          "writerType": "pcstyle",
+          "paramKey": "xyStyle",
+          "paramName": "悬疑",
+          "paramType": "select",
+          "sort": 12,
+          "placeholder": "悬疑脑洞,刑侦推理,诡秘悬疑,奇幻悬疑,心理悬疑,惊悚恐怖,奇人异事,夺宝探险,脑洞大开,风水相术,社会派悬疑​​,规则怪谈​​,民俗灵异,谍战悬疑,盗墓探险,​​科幻悬疑,历史悬疑​​,无限流悬疑,灵异事件,悬疑推理,推理破案",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        },
+        {
+          "createBy": null,
+          "createTime": null,
+          "updateBy": null,
+          "updateTime": null,
+          "remark": null,
+          "params": {
+            "@type": "java.util.HashMap"
+          },
+          "id": 69,
+          "writerType": "pcstyle",
+          "paramKey": "dpStyle",
+          "paramName": "其他",
+          "paramType": "select",
+          "sort": 15,
+          "placeholder": "文艺随笔,短故事,评论传记,影视剧本,轻松,甜宠文,虐恋文,姐弟恋,大叔恋,宫廷宅斗,穿越,重生,末世言情,纯爱,耽美,百合,家庭温情,友情至上,宠物情感,师生恋,医患恋,伪骨科,二次元,耽改衍生,乙女向,权谋江湖",
+          "icon": "",
+          "pid": 54,
+          "disabled": 0,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "wstyle": [
+    {
+      "createBy": null,
+      "createTime": null,
+      "updateBy": null,
+      "updateTime": null,
+      "remark": null,
+      "params": {
+        "@type": "java.util.HashMap"
+      },
+      "id": 78,
+      "writerType": "writestyle",
+      "paramKey": "wstyle",
+      "paramName": "小说语言风格(可多选)",
+      "paramType": null,
+      "sort": null,
+      "placeholder": "不限风格,网络热梗,幽默风趣,简单明了,现实写实,口语化,温情治愈,轻松日常,豪放大气,清新自然,丧系幽默,平实自然,质朴流畅,清水文风,口语化自然,吐槽风,小白风",
+      "icon": null,
+      "pid": 0,
+      "disabled": null,
+      "children": []
+    }
+  ]
+}
