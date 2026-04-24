@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Plus, BookOpen, Trash2 } from 'lucide-react'
+import { Plus, BookOpen, Trash2, Sparkles } from 'lucide-react'
 import { useNovelStore } from '../stores/novelStore'
 import type { NovelSummary } from '../types/novel'
 import { PRESET_DATA } from '../types/novel'
@@ -83,6 +83,13 @@ export function HomePage() {
           >
             <BookOpen size={16} />
             知识库
+          </button>
+          <button
+            onClick={() => navigate('/styles')}
+            className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors"
+          >
+            <Sparkles size={16} />
+            风格库
           </button>
           <button
             onClick={handleCreate}

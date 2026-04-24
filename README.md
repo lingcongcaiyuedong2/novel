@@ -2,6 +2,8 @@
 
 基于 Claude AI 的修仙小说自动生成平台。通过网页界面配置小说参数（题材、人物、剧情、字数等），系统调用 Claude API 分 6 层递进生成完整小说。
 
+> 完整的日常运行、开发、部署与排障流程见 [RUNNING.md](./RUNNING.md)。
+
 ## 技术栈
 
 | 层级 | 技术 |
@@ -152,8 +154,8 @@ ANTHROPIC_BASE_URL=https://your-proxy.com/
 |------|---------------------------------------|------------------------|
 | POST | `/api/novels/{id}/generate`           | 触发大纲生成           |
 | GET  | `/api/novels/{id}/generate/stream`    | SSE 流式接收生成进度   |
-| POST | `/api/novels/{id}/generate/chapters`  | 批量生成章节正文       |
-| POST | `/api/chapters/{id}/generate`         | 生成单章正文           |
+| GET  | `/api/novels/{id}/generate/chapters`  | SSE 批量生成章节正文   |
+| GET  | `/api/chapters/{id}/generate`         | SSE 生成单章正文       |
 
 ### 章节管理
 

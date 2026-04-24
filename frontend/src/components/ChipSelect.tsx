@@ -55,7 +55,6 @@ export function ChipSelect({
     setCustomInput('')
   }
 
-  const allOptions = groups.flatMap((g) => g.options)
   const isAtLimit = multi && maxSelect ? selected.length >= maxSelect : false
 
   return (

@@ -97,6 +97,8 @@ class NovelConfigData(BaseModel):
     foreshadowingDensity: ForeshadowingDensity = ForeshadowingDensity.medium
     storyRhythm: StoryRhythm = StoryRhythm.balanced
 
+    customStyleId: Optional[str] = None
+
 
 # Request/Response schemas
 class CreateNovelRequest(BaseModel):

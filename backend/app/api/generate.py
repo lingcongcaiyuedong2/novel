@@ -95,7 +95,7 @@ async def update_chapter_endpoint(chapter_id: str, req: UpdateChapterRequest):
     return chapter
 
 
-@router.post("/chapters/{chapter_id}/generate")
+@router.get("/chapters/{chapter_id}/generate")
 async def generate_chapter_content(chapter_id: str):
     """SSE 流式生成单章正文"""
     chapter = await get_chapter(chapter_id)
@@ -125,7 +125,7 @@ async def generate_chapter_content(chapter_id: str):
 
 # ---------- 批量章节生成 ----------
 
-@router.post("/novels/{novel_id}/generate/chapters")
+@router.get("/novels/{novel_id}/generate/chapters")
 async def batch_generate_chapters(novel_id: str):
     """SSE 流式批量生成所有空章节正文"""
     novel = await get_novel(novel_id)

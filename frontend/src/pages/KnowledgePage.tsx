@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, Plus, Search, Trash2, Edit3, X, BookOpen, Hash } from 'lucide-react'
+import { ArrowLeft, Plus, Search, Trash2, Edit3, X, BookOpen } from 'lucide-react'
 import {
   listKnowledge, createKnowledge, updateKnowledge, deleteKnowledge,
   CATEGORIES,

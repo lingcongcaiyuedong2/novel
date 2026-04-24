@@ -67,7 +67,9 @@ def _genre_desc(config: NovelConfigData) -> str:
     return mapping.get(config.genre.value, config.genre.value)
 
 
-def _style_desc(config: NovelConfigData) -> str:
+def _style_desc(config: NovelConfigData, override: str | None = None) -> str:
+    if override:
+        return override
     mapping = {
         "cool": "爽文风格（节奏快，爽点密集，打脸桥段多）",
         "passionate": "热血风格（热血沸腾，燃点不断）",
@@ -129,12 +131,12 @@ def _char_desc(char, role_name: str) -> str:
     return "\n".join(parts)
 
 
-def _config_summary(config: NovelConfigData) -> str:
+def _config_summary(config: NovelConfigData, style_override: str | None = None) -> str:
     """生成配置摘要，供所有 prompt 共用"""
     lines = [
         f"小说名称：《{config.title}》",
         f"题材类型：{_genre_desc(config)}",
-        f"写作风格：{_style_desc(config)}",
+        f"写作风格：{_style_desc(config, style_override)}",
         f"目标字数：{config.targetWordCount // 10000}万字",
         f"修炼体系：{config.cultivationSystem.value}",
         f"系统设定：{_system_desc(config)}",
@@ -166,10 +168,10 @@ def _config_summary(config: NovelConfigData) -> str:
 # 6 阶段 Prompt 构建
 # ============================================================
 
-def build_world_prompt(config: NovelConfigData) -> str:
+def build_world_prompt(config: NovelConfigData, style_override: str | None = None) -> str:
     return f"""请根据以下小说配置，生成详细的修仙世界观设定文档。
 
-{_config_summary(config)}
+{_config_summary(config, style_override)}
 
 ---
 
@@ -200,12 +202,12 @@ def build_world_prompt(config: NovelConfigData) -> str:
 - 设定要有新意，不要完全套用常见模板"""
 
 
-def build_outline_prompt(config: NovelConfigData, world: str) -> str:
+def build_outline_prompt(config: NovelConfigData, world: str, style_override: str | None = None) -> str:
     chapter_count = max(30, config.targetWordCount // 2500)
     return f"""请根据以下小说配置和世界观，生成全书总大纲。
 
 【小说配置】
-{_config_summary(config)}
+{_config_summary(config, style_override)}
 
 【世界观设定】
 {world}
@@ -248,11 +250,11 @@ def build_outline_prompt(config: NovelConfigData, world: str) -> str:
 - 每幕的章节范围要合理分配"""
 
 
-def build_characters_prompt(config: NovelConfigData, world: str, outline: str) -> str:
+def build_characters_prompt(config: NovelConfigData, world: str, outline: str, style_override: str | None = None) -> str:
     return f"""请根据以下小说配置、世界观和总大纲，生成详细的人物档案。
 
 【小说配置】
-{_config_summary(config)}
+{_config_summary(config, style_override)}
 
 【世界观设定】
 {world}
@@ -298,11 +300,15 @@ def build_characters_prompt(config: NovelConfigData, world: str, outline: str) -
 
 
 def build_volume_outline_prompt(
-    config: NovelConfigData, world: str, outline: str, characters: str
+    config: NovelConfigData, world: str, outline: str, characters: str,
+    style_override: str | None = None,
 ) -> str:
     chapter_count = max(30, config.targetWordCount // 2500)
     volume_count = max(3, chapter_count // 50)
     return f"""请根据以下信息，将全书分为 {volume_count} 卷，生成分卷大纲。
+
+【小说配置】
+{_config_summary(config, style_override)}
 
 【总大纲】
 {outline}
@@ -357,6 +363,7 @@ def build_chapter_outlines_prompt(
     batch_start: int,
     batch_end: int,
     previous_outlines: str = "",
+    style_override: str | None = None,
 ) -> str:
     context_section = ""
     if previous_outlines:
@@ -411,6 +418,7 @@ def build_chapter_content_prompt(
     prev_summary: str = "",
     next_outline: str = "",
     knowledge_snippets: list[str] | None = None,
+    style_override: str | None = None,
 ) -> str:
     prev_section = ""
     if prev_summary:
@@ -436,7 +444,7 @@ def build_chapter_content_prompt(
 
     return f"""请根据以下信息，撰写第 {chapter_number} 章《{chapter_title}》的完整正文。
 
-【写作风格】：{_style_desc(config)}
+【写作风格】：{_style_desc(config, style_override)}
 
 【世界观设定】
 {world}

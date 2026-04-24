@@ -147,10 +147,13 @@ async def search_knowledge_for_prompt(keywords: list[str], limit: int = 3) -> li
             params.extend([q, q, q])
 
         score_expr = " + ".join(conditions)
+        # 用子查询让 score_expr 只绑定一次参数，避免 WHERE 里重复占位
         sql = f"""
-            SELECT title, content, ({score_expr}) AS relevance
-            FROM knowledge_items
-            WHERE ({score_expr}) > 0
+            SELECT title, content, relevance FROM (
+                SELECT title, content, ({score_expr}) AS relevance
+                FROM knowledge_items
+            ) AS scored
+            WHERE relevance > 0
             ORDER BY relevance DESC
             LIMIT ?
         """

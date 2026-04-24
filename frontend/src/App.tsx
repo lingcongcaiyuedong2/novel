@@ -5,6 +5,7 @@ import { NovelDetailPage } from './pages/NovelDetailPage'
 import { ChapterPage } from './pages/ChapterPage'
 import { KnowledgePage } from './pages/KnowledgePage'
 import { EditNovelPage } from './pages/EditNovelPage'
+import { StyleLibraryPage } from './pages/StyleLibraryPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/novel/:id/edit" element={<EditNovelPage />} />
           <Route path="/novel/:id/chapter/:chapterId" element={<ChapterPage />} />
           <Route path="/knowledge" element={<KnowledgePage />} />
+          <Route path="/styles" element={<StyleLibraryPage />} />
         </Routes>
       </div>
     </BrowserRouter>

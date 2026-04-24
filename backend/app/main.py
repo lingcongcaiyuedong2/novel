@@ -10,6 +10,7 @@ from app.api.novels import router as novels_router
 from app.api.generate import router as generate_router
 from app.api.knowledge import router as knowledge_router
 from app.api.export import router as export_router
+from app.api.styles import router as styles_router
 
 
 @asynccontextmanager
@@ -32,6 +33,7 @@ app.include_router(novels_router)
 app.include_router(generate_router)
 app.include_router(knowledge_router)
 app.include_router(export_router)
+app.include_router(styles_router)
 
 
 @app.get("/health")

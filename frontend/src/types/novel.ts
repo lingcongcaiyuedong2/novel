@@ -77,6 +77,9 @@ export interface NovelConfig {
   plotPoints: string[]
   foreshadowingDensity: ForeshadowingDensity
   storyRhythm: StoryRhythm
+
+  // 自定义写作风格（覆盖内置 writingStyle）
+  customStyleId?: string
 }
 
 // 小说状态

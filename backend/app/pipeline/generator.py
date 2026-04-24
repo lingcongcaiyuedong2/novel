@@ -23,6 +23,7 @@ from app.services.chapter_service import (
     get_novel_docs,
 )
 from app.services.knowledge_service import search_knowledge_for_prompt
+from app.services.style_service import get_style_profile_text
 
 
 def sse_event(event: str, data: dict) -> str:
@@ -66,11 +67,16 @@ async def run_outline_pipeline(
     total_stages = 5
     chapter_count = max(30, config.targetWordCount // 2500)
 
+    # 解析自定义风格（一次查库，后续所有 prompt builder 共用）
+    style_override: str | None = None
+    if config.customStyleId:
+        style_override = await get_style_profile_text(config.customStyleId)
+
     # ========== Stage 1: 世界观 ==========
     yield sse_event("stage_start", {"stage": "world", "label": "世界观生成", "index": 1, "total": total_stages})
 
     world = ""
-    async for chunk in claude_stream(build_world_prompt(config)):
+    async for chunk in claude_stream(build_world_prompt(config, style_override=style_override)):
         world += chunk
         yield sse_event("chunk", {"stage": "world", "text": chunk})
 
@@ -81,7 +87,7 @@ async def run_outline_pipeline(
     yield sse_event("stage_start", {"stage": "outline", "label": "总大纲生成", "index": 2, "total": total_stages})
 
     outline = ""
-    async for chunk in claude_stream(build_outline_prompt(config, world), max_tokens=8192):
+    async for chunk in claude_stream(build_outline_prompt(config, world, style_override=style_override), max_tokens=8192):
         outline += chunk
         yield sse_event("chunk", {"stage": "outline", "text": chunk})
 
@@ -92,7 +98,7 @@ async def run_outline_pipeline(
     yield sse_event("stage_start", {"stage": "characters", "label": "人物档案生成", "index": 3, "total": total_stages})
 
     characters = ""
-    async for chunk in claude_stream(build_characters_prompt(config, world, outline)):
+    async for chunk in claude_stream(build_characters_prompt(config, world, outline, style_override=style_override)):
         characters += chunk
         yield sse_event("chunk", {"stage": "characters", "text": chunk})
 
@@ -103,7 +109,7 @@ async def run_outline_pipeline(
     yield sse_event("stage_start", {"stage": "volumes", "label": "分卷大纲生成", "index": 4, "total": total_stages})
 
     volume_outline = ""
-    async for chunk in claude_stream(build_volume_outline_prompt(config, world, outline, characters), max_tokens=8192):
+    async for chunk in claude_stream(build_volume_outline_prompt(config, world, outline, characters, style_override=style_override), max_tokens=8192):
         volume_outline += chunk
         yield sse_event("chunk", {"stage": "volumes", "text": chunk})
 
@@ -131,6 +137,7 @@ async def run_outline_pipeline(
         prompt = build_chapter_outlines_prompt(
             config, world, outline, characters, volume_outline,
             batch_start, batch_end, prev_text,
+            style_override=style_override,
         )
         async for chunk in claude_stream(prompt, max_tokens=8192):
             batch_text += chunk
@@ -170,6 +177,11 @@ async def run_chapter_generation(
 
     config = NovelConfigData.model_validate_json(docs["config_json"])
 
+    # 解析自定义风格
+    style_override: str | None = None
+    if config.customStyleId:
+        style_override = await get_style_profile_text(config.customStyleId)
+
     # Get previous chapter summary (last 2 chapters) - use structured summary
     chapters = await get_chapters(novel_id)
     prev_summary = ""
@@ -208,6 +220,7 @@ async def run_chapter_generation(
         prev_summary=prev_summary,
         next_outline=next_outline,
         knowledge_snippets=knowledge_snippets,
+        style_override=style_override,
     )
 
     yield sse_event("stage_start", {"stage": "content", "label": f"第{chapter['chapterNumber']}章正文生成"})
