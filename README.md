@@ -19,10 +19,12 @@
 - **6 阶段生成流水线** — 世界观 → 总大纲 → 人物档案 → 分卷大纲 → 章节大纲 → 章节正文
 - **SSE 实时流式输出** — 生成过程实时展示，可切换查看各阶段内容
 - **知识库系统** — 内置 7 大类 100+ 条修仙素材，AI 生成时自动匹配注入
+- **风格库系统** — 上传参考文本提取写作风格，生成时可选用自定义风格
 - **批量章节生成** — 一键生成所有章节正文，SSE 流式追踪进度
 - **章节编辑** — 支持手动修改标题、大纲、正文
 - **TXT 导出** — 完成后导出为 TXT 文件
 - **第三方 API 支持** — 通过 `.env` 配置 `ANTHROPIC_BASE_URL` 对接第三方代理
+- **一键部署** — 提供安装脚本和启动脚本，clone 后即可快速搭建
 
 ## 项目结构
 
@@ -62,6 +64,7 @@ novel/
 │   │   │   ├── novels.py            # 小说 CRUD
 │   │   │   ├── generate.py          # 生成 + 章节管理
 │   │   │   ├── knowledge.py         # 知识库 + 角色预设
+│   │   │   ├── styles.py            # 风格库管理
 │   │   │   └── export.py            # TXT 导出
 │   │   ├── models/schemas.py        # Pydantic 数据模型
 │   │   ├── database/db.py           # SQLite 初始化 + 知识库种子
@@ -76,8 +79,15 @@ novel/
 │   │       └── character_presets.py # 角色预设选项数据
 │   ├── .env                          # 环境变量（API Key、Base URL）
 │   ├── requirements.txt
-│   └── data/                         # SQLite 数据库（自动创建）
+│   ├── scripts/
+│   │   ├── dump_db.py               # 导出数据库为 SQL
+│   │   └── restore_db.py            # 从 SQL dump 恢复数据库
+│   └── data/
+│       ├── novels.db                # SQLite 数据库（自动创建，gitignore）
+│       └── novels_dump.sql          # 数据库 SQL 备份
 │
+├── setup.bat / setup.sh              # 一键安装脚本
+├── start.bat / start.sh / start.ps1  # 一键启动脚本
 └── README.md
 ```
 
@@ -85,9 +95,37 @@ novel/
 
 ### 前提条件
 
+- Git
 - Node.js >= 20
 - Python >= 3.10
 - Anthropic API Key（或第三方代理）
+
+### 方式一：一键安装（推荐）
+
+```bash
+git clone https://github.com/lingcongcaiyuedong2/novel.git
+cd novel
+
+# Windows（双击或 CMD）:
+setup.bat
+
+# macOS / Linux / Git Bash:
+chmod +x setup.sh && ./setup.sh
+```
+
+安装完成后编辑 `backend/.env` 填入 API Key，然后：
+
+```bash
+# Windows:
+start.bat
+
+# macOS / Linux / Git Bash:
+./start.sh
+```
+
+浏览器访问 `http://localhost:5173` 即可使用。
+
+### 方式二：手动安装
 
 ### 1. 配置环境变量
 
@@ -173,6 +211,15 @@ ANTHROPIC_BASE_URL=https://your-proxy.com/
 | POST   | `/api/knowledge`                  | 新建素材           |
 | GET    | `/api/knowledge/presets/{type}`   | 角色预设选项       |
 | DELETE | `/api/knowledge/{id}`             | 删除自定义素材     |
+
+### 风格库
+
+| 方法   | 路径                    | 说明                         |
+|--------|-------------------------|------------------------------|
+| GET    | `/api/styles`           | 风格列表                     |
+| GET    | `/api/styles/{id}`      | 风格详情                     |
+| POST   | `/api/styles`           | 上传 .txt 文件创建风格档案   |
+| DELETE | `/api/styles/{id}`      | 删除风格                     |
 
 ### 导出
 
