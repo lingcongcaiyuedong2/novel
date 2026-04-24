@@ -38,10 +38,31 @@
 
 ## 2. 首次安装（仅一次）
 
+### 快速方式：一键安装脚本
+
+新电脑上装好 Git、Python 3.10+、Node.js 20+ 后：
+
+```bash
+git clone https://github.com/lingcongcaiyuedong2/novel.git
+cd novel
+
+# Windows（双击或 CMD）:
+setup.bat
+
+# macOS / Linux / Git Bash:
+chmod +x setup.sh && ./setup.sh
+```
+
+脚本会自动完成以下全部步骤：创建 venv、安装 pip 依赖、安装 npm 依赖、从 SQL dump 恢复数据库。
+完成后只需编辑 `backend/.env` 填入 API Key，然后 `start.bat` / `./start.sh` 启动。
+
+### 手动方式
+
 ### 2.1 克隆与进入项目
 
 ```bash
-cd D:/vscode/vscode-peojects/novel
+git clone https://github.com/lingcongcaiyuedong2/novel.git
+cd novel
 ```
 
 ### 2.2 配置后端环境变量
@@ -86,6 +107,14 @@ pip install python-dotenv      # main.py 使用 load_dotenv，需单独安装
 ```bash
 cd ../frontend
 npm install
+```
+
+### 2.5 恢复数据库（可选）
+
+如果仓库中有 `backend/data/novels_dump.sql`，可恢复之前的小说数据：
+
+```bash
+python backend/scripts/restore_db.py
 ```
 
 ---
